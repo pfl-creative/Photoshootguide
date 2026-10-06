@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
       window.trackEvent('proof_buy_click');
     }
     window.trackEvent('checkout_start', { source });
-    // Lead to pre-checkout upsell page before payment
-    window.location.href = 'upsell.html';
+    // Lead to pre-checkout toolkit page before payment
+    window.location.href = 'toolkit.html';
   };
 });
