@@ -318,8 +318,8 @@
 
 /* Bundle Hero Image Showcase */
 .tk-bundle-showcase {
-  background: linear-gradient(180deg, #F5EFEB 0%, #EDE5DC 100%);
-  padding: 2rem 2rem 1.5rem;
+  background-color: var(--color-white);
+  padding: 2.5rem 2rem 1.75rem;
   text-align: center;
   position: relative;
   border-bottom: 2px solid var(--color-black);
@@ -327,17 +327,17 @@
 
 @media (max-width: 576px) {
   .tk-bundle-showcase {
-    padding: 1.25rem 1rem 1rem;
+    padding: 1.5rem 1rem 1.25rem;
   }
 }
 
 .tk-bundle-img-wrapper {
-  max-width: 660px;
+  max-width: 520px;
   margin: 0 auto;
-  border-radius: 6px;
+  border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(32, 32, 32, 0.12);
+  box-shadow: none;
+  border: none;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 

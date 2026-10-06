@@ -258,8 +258,8 @@
 }
 
 .ty-product-visual {
-  background-color: #F1ECE1;
-  padding: 1.5rem;
+  background-color: var(--color-white);
+  padding: 1.75rem 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -272,40 +272,38 @@
   .ty-product-visual {
     border-right: none;
     border-bottom: 2px solid var(--color-black);
-    padding: 1.75rem 1.5rem 1.25rem;
+    padding: 2rem 1.5rem 1.5rem;
   }
 }
 
 .ty-product-img-wrap {
   width: 100%;
-  max-width: 220px;
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-  border: 1px solid rgba(32, 32, 32, 0.12);
+  max-width: 210px;
+  overflow: visible;
   transition: transform 0.3s ease;
 }
 
 .ty-product-img-wrap:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.02);
 }
 
 .ty-product-img-wrap img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.06));
 }
 
 .ty-product-format-badge {
-  margin-top: 0.85rem;
+  margin-top: 1rem;
   font-family: var(--font-grotesk);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.06em;
-  color: rgba(32, 32, 32, 0.65);
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(32, 32, 32, 0.15);
+  color: var(--color-black);
+  background-color: var(--color-ivory);
+  border: 1px solid rgba(32, 32, 32, 0.18);
   padding: 0.25rem 0.65rem;
   border-radius: 4px;
 }
