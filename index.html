@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDGN5M6J9N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DDGN5M6J9N');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Photoshoot Guide โดย Prompt Fashion Lab — 1 รูปสินค้า + 1 Brief ได้ภาพ Photoshoot ทั้ง Set เริ่มต้นเพียง ฿99">
+  <title>AI Photoshoot Guide | Prompt Fashion Lab</title>
+  
+  <!-- Vanilla CSS Style Sheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER / NAVIGATION
+       ========================================== -->
+  <header>
+    <div class="container header-container">
+      <a href="#" class="logo">
+        PROMPT FASHION <span>LAB</span>
+      </a>
+      <div class="brand-badge">PFL ✦ STUDIO</div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       SECTION 1 — HERO
+       ========================================== -->
+  <section id="hero" class="section-padding">
+    <div class="container hero-grid">
+      
+      <!-- Hero Content -->
+      <div class="hero-content reveal active">
+        <div class="hero-tagline">
+          <span>AI PHOTOSHOOT GUIDE</span> ✦
+        </div>
+        
+        <h1 class="text-balance-thai hero-title">
+          1 รูปสินค้า + 1 Brief<br>
+          ได้ภาพ Photoshoot ทั้ง Set
+        </h1>
+        
+        <div class="hero-desc text-balance-thai">
+          <p style="font-size: 1.1rem; font-weight: 500; color: var(--color-black); margin-bottom: 0.5rem;">
+            ไม่ต้องเขียน Prompt เก่ง<br>
+            ไม่ต้องมีพื้นฐาน AI
+          </p>
+          <p style="font-size: 1rem; opacity: 0.85; line-height: 1.55;">
+            เรียนรู้ Workflow ตั้งแต่ <strong>Product Photo → Brief → Generate</strong><br>
+            และวิธีสร้างหลาย Shot ให้ดูเหมือนมาจาก Photoshoot เดียวกัน
+          </p>
+        </div>
+
+        <!-- Highlighted Proof Point Badge -->
+        <div class="hero-proof-badge">
+          <span class="star">✦</span>
+          <span>พร้อมตัวอย่างจริง 1 Photoshoot → 11 ภาพ</span>
+        </div>
+
+        <!-- Pricing & Hero CTA -->
+        <div class="hero-cta-wrap" style="margin-top: 0.5rem;">
+          <div class="hero-price-tag">
+            เริ่มต้นเพียง ฿99
+          </div>
+          <a href="#order" class="btn btn-black" onclick="trackEvent('hero_cta_click')">
+            เริ่มทำ AI Photoshoot — ฿99
+          </a>
+          <div class="hero-cta-micro">
+            ชำระครั้งเดียว • เริ่มทำตามได้เลย
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual: 1 Product Photo → 1 Photoshoot Set -->
+      <div class="hero-transformation-box reveal active" style="transition-delay: 0.15s;">
+        <!-- Top: Source Product Reference -->
+        <div class="hero-ref-bar">
+          <div class="hero-ref-img-card">
+            <div class="hero-ref-img-wrap">
+              <img src="images/proof_knit_ref.jpg" alt="รูปสินค้าจริง 1 รูป">
+            </div>
+            <div class="hero-ref-label">ORIGINAL PRODUCT</div>
+          </div>
+          <div class="hero-ref-desc">
+            <span class="hero-ref-tag">START HERE ✦</span>
+            <h4>มีแค่รูปสินค้า 1 รูป</h4>
+            <p>ถ่ายจากไม้แขวนหรือวางพื้น ไม่ต้องมีนางแบบจริง ไม่ต้องจัดสตูดิโอใหญ่</p>
+          </div>
+        </div>
+
+        <!-- Divider / Transformation Indicator -->
+        <div class="hero-transform-divider">
+          <span class="divider-title">1 PRODUCT PHOTO → 1 PHOTOSHOOT SET</span>
+          <span class="divider-sub">same model • same mood • multiple shots ↘</span>
+        </div>
+
+        <!-- Cohesive Photoshoot Set: 6 Shots Preview -->
+        <div class="hero-mini-gallery">
+          <div class="hero-mini-item">
+            <div class="hero-mini-img-wrap">
+              <img src="images/proof_knit_hero.jpg" alt="01 HERO SHOT">
+            </div>
+            <div class="hero-mini-caption"><span>01</span> HERO</div>
+          </div>
+          <div class="hero-mini-item">
+            <div class="hero-mini-img-wrap">
+              <img src="images/proof_knit_fullbody.jpg" alt="02 FULL BODY">
+            </div>
+            <div class="hero-mini-caption"><span>02</span> FULL BODY</div>
+          </div>
+          <div class="hero-mini-item">
+            <div class="hero-mini-img-wrap">
+              <img src="images/proof_knit_closeup.jpg" alt="03 CLOSE-UP">
+            </div>
+            <div class="hero-mini-caption"><span>03</span> CLOSE-UP</div>
+          </div>
+          <div class="hero-mini-item">
+            <div class="hero-mini-img-wrap">
+              <img src="images/proof_knit_sitting.jpg" alt="04 SITTING POSE">
+            </div>
+            <div class="hero-mini-caption"><span>04</span> SITTING</div>
+          </div>
+          <div class="hero-mini-item">
+            <div class="hero-mini-img-wrap">
+              <img src="images/proof_knit_medium.jpg" alt="05 MEDIUM SHOT">
+            </div>
+            <div class="hero-mini-caption"><span>05</span> MEDIUM</div>
+          </div>
+          <div class="hero-mini-item">
+            <div class="hero-mini-img-wrap">
+              <img src="images/proof_knit_detail.jpg" alt="06 FABRIC DETAIL">
+            </div>
+            <div class="hero-mini-caption"><span>06</span> DETAIL</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 2 — THE PROBLEM
+       ========================================== -->
+  <section class="section-padding" style="background-color: var(--color-white); border-top: 1px solid rgba(32,32,32,0.08); border-bottom: 1px solid rgba(32,32,32,0.08);">
+    <div class="container">
+      
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 3.5rem;">
+        <span class="tagline-badge" style="margin-bottom: 1rem;">SOUND FAMILIAR? ✦</span>
+        <h2 class="text-balance-thai">เคยลองทำภาพ AI แล้วเป็นแบบนี้ไหม?</h2>
+      </div>
+
+      <!-- Editorial Problem Cards -->
+      <div class="problem-quotes-grid reveal">
+        <div class="problem-quote-card">
+          <div class="problem-quote-mark">“</div>
+          <p class="text-balance-thai">รูปแรกสวย แต่พอทำรูปต่อไปนางแบบเปลี่ยน</p>
+        </div>
+
+        <div class="problem-quote-card">
+          <div class="problem-quote-mark">“</div>
+          <p class="text-balance-thai">เสื้อเหมือนเดิมบ้าง ไม่เหมือนบ้าง</p>
+        </div>
+
+        <div class="problem-quote-card">
+          <div class="problem-quote-mark">“</div>
+          <p class="text-balance-thai">แต่ละภาพสวย...แต่ดูเหมือนมาจากคนละ Photoshoot</p>
+        </div>
+
+        <div class="problem-quote-card">
+          <div class="problem-quote-mark">“</div>
+          <p class="text-balance-thai">ไม่รู้ว่าต้อง Brief AI ว่าอะไรบ้าง</p>
+        </div>
+
+        <div class="problem-quote-card">
+          <div class="problem-quote-mark">“</div>
+          <p class="text-balance-thai">อยากได้หลาย Shot แต่ไม่รู้จะสั่งต่อยังไง</p>
+        </div>
+      </div>
+
+      <!-- Transition Banner -->
+      <div class="problem-transition-box reveal">
+        <div class="transition-pre text-balance-thai">
+          จริง ๆ แล้วคุณไม่จำเป็นต้องเขียน Prompt ยาว ๆ เป็น
+        </div>
+        <div class="transition-main text-balance-thai">
+          สิ่งสำคัญกว่าคือ<br>
+          <strong>รู้ว่าจะ Brief AI ยังไงให้เข้าใจภาพที่เราอยากได้</strong>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 3 — HOW IT WORKS
+       ========================================== -->
+  <section class="section-padding" style="background-color: var(--color-ivory);">
+    <div class="container">
+      
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 3.5rem;">
+        <span class="tagline-badge" style="margin-bottom: 1rem;">THE WORKFLOW ✦</span>
+        <h2 class="text-balance-thai">จากรูปสินค้า 1 รูป → Photoshoot ทั้ง Set</h2>
+      </div>
+
+      <!-- 3-Step Horizontal Flow (Desktop) / Vertical (Mobile) -->
+      <div class="workflow-step-flow reveal">
+        
+        <!-- Step 01 -->
+        <div class="workflow-card-step">
+          <div class="workflow-step-header">
+            <span class="workflow-step-num">01</span>
+            <span class="workflow-step-name">PRODUCT PHOTO</span>
+          </div>
+          <div class="workflow-step-thumb">
+            <img src="images/proof_knit_ref.jpg" alt="01 Product Photo">
+            <div class="workflow-thumb-label">1 PRODUCT REFERENCE</div>
+          </div>
+          <h3 class="text-balance-thai">เริ่มจากรูปสินค้าที่คุณมี</h3>
+          <p class="text-balance-thai">
+            แค่รูปเสื้อผ้าหรือสินค้าที่มีอยู่ ถ่ายจากไม้แขวน แสงธรรมชาติ หรือมือถือธรรมดา เพื่อใช้เป็นจุดเริ่มต้นและ Reference ให้ AI
+          </p>
+        </div>
+
+        <!-- Step 02 -->
+        <div class="workflow-card-step">
+          <div class="workflow-step-header">
+            <span class="workflow-step-num">02</span>
+            <span class="workflow-step-name">BRIEF</span>
+          </div>
+          <div class="workflow-brief-diagram">
+            <div class="brief-bullet-item">
+              <label>WHO</label>
+              <span>นางแบบสไตล์ไหน อายุเท่าไร</span>
+            </div>
+            <div class="brief-bullet-item">
+              <label>WHERE</label>
+              <span>สถานที่ / โลเคชัน</span>
+            </div>
+            <div class="brief-bullet-item">
+              <label>LIGHT</label>
+              <span>ทิศทางแสง / แสงธรรมชาติ</span>
+            </div>
+            <div class="brief-bullet-item">
+              <label>MOOD</label>
+              <span>อารมณ์และโทนของภาพ</span>
+            </div>
+          </div>
+          <h3 class="text-balance-thai">บอก AI ให้เข้าใจ</h3>
+          <p class="text-balance-thai">
+            บอก AI ว่าอยากได้ใคร ที่ไหน แสงแบบไหน และ Mood แบบไหน สื่อสารง่าย ๆ เหมือนกำลัง Brief งานให้ทีมช่างภาพ
+          </p>
+        </div>
+
+        <!-- Step 03 -->
+        <div class="workflow-card-step">
+          <div class="workflow-step-header">
+            <span class="workflow-step-num">03</span>
+            <span class="workflow-step-name">GENERATE</span>
+          </div>
+          <div class="workflow-result-grid">
+            <div class="workflow-grid-cell">
+              <img src="images/proof_knit_hero.jpg" alt="01 Hero Shot">
+            </div>
+            <div class="workflow-grid-cell">
+              <img src="images/proof_knit_fullbody.jpg" alt="02 Full Body">
+            </div>
+            <div class="workflow-grid-cell">
+              <img src="images/proof_knit_closeup.jpg" alt="03 Close-up">
+            </div>
+            <div class="workflow-grid-cell">
+              <img src="images/proof_knit_sitting.jpg" alt="04 Sitting Pose">
+            </div>
+            <div class="workflow-grid-cell">
+              <img src="images/proof_knit_medium.jpg" alt="05 Medium Shot">
+            </div>
+            <div class="workflow-grid-cell">
+              <img src="images/proof_knit_walking.jpg" alt="06 Walking Shot">
+            </div>
+            <div class="workflow-grid-cell">
+              <img src="images/proof_knit_candid.jpg" alt="07 Candid">
+            </div>
+            <div class="workflow-grid-cell">
+              <img src="images/proof_knit_crop.jpg" alt="08 Creative Crop">
+            </div>
+            <div class="workflow-grid-cell">
+              <img src="images/proof_knit_detail.jpg" alt="09 Product Detail">
+            </div>
+            <div class="workflow-grid-badge">
+              ✦ 1 BRIEF → ได้รูปเป็นเซ็ต 9 SHOTS
+            </div>
+          </div>
+          <h3 class="text-balance-thai">สร้างและขยาย Shot</h3>
+          <p class="text-balance-thai">
+            สร้างภาพแรก แล้วต่อยอดออกมาเป็นหลาย Shot ใน Photoshoot เดียวกัน คุมทั้งนางแบบและเสื้อผ้าให้ตรงตามชุดเดิม
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Under Workflow Callout -->
+      <div class="workflow-footer-callout reveal">
+        <p class="text-balance-thai">✦ ไม่ต้องเริ่มเขียน Prompt ใหม่ตั้งแต่ศูนย์ทุกภาพ ✦</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 4 — REAL EXAMPLE
+       ========================================== -->
+  <section class="section-padding" style="background-color: var(--color-white); border-top: 1px solid rgba(32,32,32,0.08);">
+    <div class="container">
+      
+      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <span class="tagline-badge" style="margin-bottom: 1rem;">PROOF IN ACTION ✦</span>
+        <h2 class="text-balance-thai">Brief ครั้งเดียว แล้วไปต่อได้อีกหลาย Shot</h2>
+        <p class="real-example-subheadline text-balance-thai">
+          ดูตัวอย่างจาก 1 สินค้า ที่นำมาสร้างเป็น Photoshoot Set จำนวน 11 ภาพ
+        </p>
+      </div>
+
+      <!-- Actual 11-image Editorial Photo Grid -->
+      <div class="editorial-11-grid reveal">
+        
+        <!-- 01 Hero Shot (Featured Large) -->
+        <div class="editorial-11-card">
+          <div class="editorial-11-img-wrap">
+            <img src="images/proof_knit_hero.jpg" alt="01 HERO SHOT">
+          </div>
+          <div class="editorial-11-caption">
+            <span class="shot-num">01 / 11</span>
+            <span class="shot-type">HERO SHOT</span>
+          </div>
+          <div class="editorial-11-desc text-balance-thai">
+            ภาพเปิดคอลเลกชัน สื่อมู้ดโทนชัดเจน นางแบบ เสื้อผ้า และสถานที่เข้ากัน
+          </div>
+        </div>
+
+        <!-- 02 Full Body -->
+        <div class="editorial-11-card">
+          <div class="editorial-11-img-wrap">
+            <img src="images/proof_knit_fullbody.jpg" alt="02 FULL BODY">
+          </div>
+          <div class="editorial-11-caption">
+            <span class="shot-num">02 / 11</span>
+            <span class="shot-type">FULL BODY</span>
+          </div>
+          <div class="editorial-11-desc text-balance-thai">
+            เห็นทั้งลุคตั้งแต่ศีรษะจรดเท้า ทรงกางเกง และรองเท้า
+          </div>
+        </div>
+
+        <!-- 03 Medium Shot -->
+        <div class="editorial-11-card">
+          <div class="editorial-11-img-wrap">
+            <img src="images/proof_knit_medium.jpg" alt="03 MEDIUM SHOT">
+          </div>
+          <div class="editorial-11-caption">
+            <span class="shot-num">03 / 11</span>
+            <span class="shot-type">MEDIUM SHOT</span>
+          </div>
+          <div class="editorial-11-desc text-balance-thai">
+            ระยะครึ่งตัว มุมมองข้ามไหล่ โชว์ดีเทลด้านหลังของเสื้อ
+          </div>
+        </div>
+
+        <!-- 04 Close-up -->
+        <div class="editorial-11-card">
+          <div class="editorial-11-img-wrap">
+            <img src="images/proof_knit_closeup.jpg" alt="04 CLOSE-UP">
+          </div>
+          <div class="editorial-11-caption">
+            <span class="shot-num">04 / 11</span>
+            <span class="shot-type">CLOSE-UP</span>
+          </div>
+          <div class="editorial-11-desc text-balance-thai">
+            โคลสอัพใบหน้า ผิว ทรงผม และปกคอเสื้อคาร์ดิแกน
+          </div>
+        </div>
+
+        <!-- 05 Product Detail -->
+        <div class="editorial-11-card">
+          <div class="editorial-11-img-wrap">
+            <img src="images/proof_knit_detail.jpg" alt="05 PRODUCT DETAIL">
+          </div>
+          <div class="editorial-11-caption">
+            <span class="shot-num">05 / 11</span>
+            <span class="shot-type">PRODUCT DETAIL</span>
+          </div>
+          <div class="editorial-11-desc text-balance-thai">
+            เจาะลึกเนื้อผ้า ลายถัก Cable Knit กระดุม และการตัดเย็บ
+          </div>
+        </div>
+
+        <!-- 06 Sitting Pose -->
+        <div class="editorial-11-card">
+          <div class="editorial-11-img-wrap">
+            <img src="images/proof_knit_sitting.jpg" alt="06 SITTING POSE">
+          </div>
+          <div class="editorial-11-caption">
+            <span class="shot-num">06 / 11</span>
+            <span class="shot-type">SITTING POSE</span>
+          </div>
+          <div class="editorial-11-desc text-balance-thai">
+            ท่านั่งสบาย ๆ บนบันไดไม้ ให้ฟีลผ่อนคลายแต่ดูแพง
+          </div>
+        </div>
+
+        <!-- 07 Walking Shot -->
+        <div class="editorial-11-card">
+          <div class="editorial-11-img-wrap">
+            <img src="images/proof_knit_walking.jpg" alt="07 WALKING SHOT">
+          </div>
+          <div class="editorial-11-caption">
+            <span class="shot-num">07 / 11</span>
+            <span class="shot-type">WALKING SHOT</span>
+          </div>
+          <div class="editorial-11-desc text-balance-thai">
+            จังหวะเดินอย่างเป็นธรรมชาติ พร้อมถือกระเป๋าเข้าชุด
+          </div>
+        </div>
+
+        <!-- 08 Candid -->
+        <div class="editorial-11-card">
+          <div class="editorial-11-img-wrap">
+            <img src="images/proof_knit_candid.jpg" alt="08 CANDID">
+          </div>
+          <div class="editorial-11-caption">
+            <span class="shot-num">08 / 11</span>
+            <span class="shot-type">CANDID</span>
+          </div>
+          <div class="editorial-11-desc text-balance-thai">
+            จังหวะเผลอ มี Foreground ใบไม้ช่วยเพิ่มมิติให้ภาพ
+          </div>
+        </div>
+
+        <!-- 09 Creative Crop -->
+        <div class="editorial-11-card">
+          <div class="editorial-11-img-wrap">
+            <img src="images/proof_knit_crop.jpg" alt="09 CREATIVE CROP">
+          </div>
+          <div class="editorial-11-caption">
+            <span class="shot-num">09 / 11</span>
+            <span class="shot-type">CREATIVE CROP</span>
+          </div>
+          <div class="editorial-11-desc text-balance-thai">
+            ครอปมุมมองแบบแมกกาซีนแฟชั่น โฟกัสปกเสื้อและเครื่องประดับ
+          </div>
+        </div>
+
+        <!-- 10 Different Camera Angle -->
+        <div class="editorial-11-card">
+          <div class="editorial-11-img-wrap">
+            <img src="images/proof_knit_angle.jpg" alt="10 DIFFERENT CAMERA ANGLE">
+          </div>
+          <div class="editorial-11-caption">
+            <span class="shot-num">10 / 11</span>
+            <span class="shot-type">DIFFERENT ANGLE</span>
+          </div>
+          <div class="editorial-11-desc text-balance-thai">
+            มุมเสย Low Angle เพิ่มความสูงโปร่ง สไตล์ Lookbook
+          </div>
+        </div>
+
+        <!-- 11 Lifestyle Shot -->
+        <div class="editorial-11-card">
+          <div class="editorial-11-img-wrap">
+            <img src="images/proof_knit_lifestyle.jpg" alt="11 LIFESTYLE SHOT">
+          </div>
+          <div class="editorial-11-caption">
+            <span class="shot-num">11 / 11</span>
+            <span class="shot-type">LIFESTYLE SHOT</span>
+          </div>
+          <div class="editorial-11-desc text-balance-thai">
+            ถือแก้วกาแฟ ดูนาฬิกา ในแสงแดดอบอุ่นยามบ่าย
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Caption Banner -->
+      <div class="example-caption-banner reveal">
+        <h4 class="text-balance-thai">สินค้าเดิม • นางแบบเดิม • Location เดิม • Mood เดิม</h4>
+        <p class="text-balance-thai">แต่เปลี่ยน Shot / Pose / Camera Angle ได้ครบทั้งเซ็ต</p>
+      </div>
+
+      <!-- Mid-page CTA -->
+      <div class="mid-section-cta reveal">
+        <h3 class="text-balance-thai">อยากได้เซ็ตภาพแบบนี้สำหรับสินค้าของคุณ?</h3>
+        <p class="text-balance-thai">ไม่ต้องเริ่มจากศูนย์ ทำตามคู่มือ AI Photoshoot Guide ทีละขั้นตอนได้ทันที</p>
+        <a href="#order" class="btn btn-yellow" onclick="trackEvent('mid_cta_click')">
+          เริ่มทำ AI Photoshoot — ฿99
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 5 — WHAT YOU GET
+       ========================================== -->
+  <section class="section-padding" style="background-color: var(--color-ivory); border-top: 1px solid rgba(32,32,32,0.08);">
+    <div class="container">
+      
+      <div style="text-align: center; max-width: 750px; margin: 0 auto 3.5rem;">
+        <span class="tagline-badge" style="margin-bottom: 1rem;">TABLE OF CONTENTS ✦</span>
+        <h2 class="text-balance-thai">สิ่งที่คุณจะได้ใน AI Photoshoot Guide</h2>
+      </div>
+
+      <!-- Editorial Table of Contents (5 Clean Cards/Rows) -->
+      <div class="toc-list-wrap reveal">
+        
+        <!-- Row 1 -->
+        <div class="toc-card-row">
+          <div class="toc-row-badge">📖</div>
+          <div class="toc-row-content">
+            <div class="toc-row-tag">CHAPTER 01 / PREP</div>
+            <h3 class="toc-row-title text-balance-thai">เตรียม Product Photo</h3>
+            <p class="toc-row-desc text-balance-thai">
+              <strong>วิธีเตรียมรูปสินค้าก่อนเริ่มสร้างภาพ</strong><br>
+              เรียนรู้ว่าควรเลือกรูปแบบไหน เพื่อให้ AI มี Reference ที่ชัดเจนก่อนเริ่มทำงาน
+            </p>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="toc-card-row">
+          <div class="toc-row-badge">📖</div>
+          <div class="toc-row-content">
+            <div class="toc-row-tag">CHAPTER 02 / WORKFLOW</div>
+            <h3 class="toc-row-title text-balance-thai">Product Photo → Brief → Generate</h3>
+            <p class="toc-row-desc text-balance-thai">
+              <strong>Workflow ตั้งแต่เริ่มต้นจนได้ภาพ</strong><br>
+              เข้าใจขั้นตอนการทำงานแบบง่าย ๆ ไม่ต้องลองผิดลองถูกเองตั้งแต่ศูนย์
+            </p>
+          </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="toc-card-row">
+          <div class="toc-row-badge">📖</div>
+          <div class="toc-row-content">
+            <div class="toc-row-tag">CHAPTER 03 / STEP-BY-STEP</div>
+            <h3 class="toc-row-title text-balance-thai">Step-by-Step AI Photoshoot</h3>
+            <p class="toc-row-desc text-balance-thai">
+              <strong>ขั้นตอนการใช้ AI สร้างเซ็ตภาพแบบละเอียด พร้อมตัวอย่าง</strong><br>
+              ทำตามทีละขั้น พร้อมดูตัวอย่างจริงว่า Photoshoot หนึ่งเซ็ตถูกสร้างขึ้นมาอย่างไร
+            </p>
+          </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="toc-card-row">
+          <div class="toc-row-badge">📖</div>
+          <div class="toc-row-content">
+            <div class="toc-row-tag">CHAPTER 04 / CONSISTENCY</div>
+            <h3 class="toc-row-title text-balance-thai">Multiple Shots, Same Photoshoot</h3>
+            <p class="toc-row-desc text-balance-thai">
+              <strong>วิธีสร้างหลาย Shot ให้อยู่ใน Photoshoot เดียวกัน</strong><br>
+              ต่อยอดจากภาพแรกไปเป็นมุมอื่น Pose อื่น และ Composition อื่น โดยยังคง Direction เดิมของ Photoshoot
+            </p>
+          </div>
+        </div>
+
+        <!-- Row 5 -->
+        <div class="toc-card-row">
+          <div class="toc-row-badge">📖</div>
+          <div class="toc-row-content">
+            <div class="toc-row-tag">CHAPTER 05 / TROUBLESHOOTING</div>
+            <h3 class="toc-row-title text-balance-thai">Fix & Troubleshoot</h3>
+            <p class="toc-row-desc text-balance-thai">
+              <strong>Tips ในการปรับแก้เพิ่มเติม + Troubleshooting เบื้องต้น</strong><br>
+              ถ้าภาพที่ได้ยังไม่ตรงใจ เรียนรู้วิธีสังเกตปัญหาและลองปรับแก้ด้วยตัวเองก่อน
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 6 — MADE FOR BEGINNERS
+       ========================================== -->
+  <section class="section-padding" style="background-color: var(--color-white); border-top: 1px solid rgba(32,32,32,0.08);">
+    <div class="container">
+      
+      <div style="text-align: center; max-width: 750px; margin: 0 auto 3rem;">
+        <span class="tagline-badge" style="margin-bottom: 1rem;">BEGINNER FRIENDLY ✦</span>
+        <h2 class="text-balance-thai">ไม่ต้องเป็นสาย Tech ก็เริ่มได้</h2>
+      </div>
+
+      <div class="beginners-card-container reveal">
+        <div class="beginners-grid">
+          
+          <!-- Left: Checklist -->
+          <div class="beginners-checklist">
+            <div class="beginners-check-item text-balance-thai">
+              <span class="check-icon">✓</span>
+              <span>ไม่จำเป็นต้องเก่งภาษาอังกฤษ</span>
+            </div>
+            <div class="beginners-check-item text-balance-thai">
+              <span class="check-icon">✓</span>
+              <span>ไม่ต้องจำศัพท์ Prompt ยาว ๆ</span>
+            </div>
+            <div class="beginners-check-item text-balance-thai">
+              <span class="check-icon">✓</span>
+              <span>ไม่ต้องมีพื้นฐาน Photography</span>
+            </div>
+            <div class="beginners-check-item text-balance-thai">
+              <span class="check-icon">✓</span>
+              <span>มีรูปสินค้าก็เริ่มทดลองทำได้</span>
+            </div>
+            <div class="beginners-check-item text-balance-thai">
+              <span class="check-icon">✓</span>
+              <span>ทำตาม Workflow ทีละ Step</span>
+            </div>
+          </div>
+
+          <!-- Right: Main Statement Box -->
+          <div class="beginners-statement-box">
+            <div class="statement-sub">OUR PHILOSOPHY</div>
+            <h3 class="text-balance-thai">เราไม่ได้สอนให้คุณเป็น AI Expert</h3>
+            <p class="text-balance-thai">
+              เราอยากให้คุณสามารถคุยกับ AI<br>
+              <strong>เหมือนกำลัง Brief งานให้ทีมถ่ายภาพ</strong>
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 7 — FREE EBOOK UPDATES
+       ========================================== -->
+  <section class="section-padding" style="background-color: var(--color-ivory); border-top: 1px solid rgba(32,32,32,0.08);">
+    <div class="container">
+      
+      <div class="free-update-card reveal">
+        <span class="free-update-badge">FREE UPDATE ✦</span>
+        <h3 class="text-balance-thai">AI เปลี่ยน คู่มือก็ Update ตาม</h3>
+        
+        <p class="text-balance-thai">
+          AI เปลี่ยนเร็ว และ Workflow ที่ใช้ได้ดีวันนี้ อาจมีวิธีที่ง่ายหรือดีกว่าเดิมในอนาคต
+        </p>
+        <p class="text-balance-thai">
+          หากมีการเปลี่ยนแปลงที่มีผลต่อเนื้อหาในคู่มือ Prompt Fashion Lab จะปรับปรุงเป็น Version ใหม่ให้
+        </p>
+
+        <div class="free-update-highlight text-balance-thai">
+          ✦ ลูกค้าที่ซื้อแล้ว รับ Ebook Version ใหม่ฟรี
+        </div>
+
+        <div class="free-update-email-box text-balance-thai">
+          <span>📩</span>
+          <span>เมื่อมี Version ใหม่ เราจะแจ้งเตือนไปทาง E-mail ที่ใช้ในการสั่งซื้อ</span>
+        </div>
+
+        <div class="free-update-clarification text-balance-thai">
+          * ไม่มีค่าใช้จ่ายเพิ่มเติมสำหรับ Ebook Update
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 8 — WHO IS THIS FOR?
+       ========================================== -->
+  <section class="section-padding" style="background-color: var(--color-white); border-top: 1px solid rgba(32,32,32,0.08);">
+    <div class="container">
+      
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">
+        <span class="tagline-badge" style="margin-bottom: 1rem;">TARGET AUDIENCE ✦</span>
+        <h2 class="text-balance-thai">เหมาะกับคุณ ถ้า...</h2>
+      </div>
+
+      <div class="audience-editorial-grid reveal">
+        <div class="audience-editorial-card">
+          <span class="audience-card-star">✦</span>
+          <p class="text-balance-thai">มีร้านเสื้อผ้าออนไลน์ และอยากมีภาพไว้ลงขายมากขึ้น</p>
+        </div>
+
+        <div class="audience-editorial-card">
+          <span class="audience-card-star">✦</span>
+          <p class="text-balance-thai">กำลังเริ่มทำ Fashion Brand</p>
+        </div>
+
+        <div class="audience-editorial-card">
+          <span class="audience-card-star">✦</span>
+          <p class="text-balance-thai">ถ่ายรูปสินค้าเอง แต่อยากลองเปลี่ยนเป็นภาพนางแบบ</p>
+        </div>
+
+        <div class="audience-editorial-card">
+          <span class="audience-card-star">✦</span>
+          <p class="text-balance-thai">เคยลอง AI แล้ว แต่ภาพแต่ละรูปยังไม่ค่อยไปด้วยกัน</p>
+        </div>
+
+        <div class="audience-editorial-card">
+          <span class="audience-card-star">✦</span>
+          <p class="text-balance-thai">อยากทดลอง AI ก่อน โดยยังไม่ต้องลงทุนเยอะ</p>
+        </div>
+
+        <div class="audience-editorial-card">
+          <span class="audience-card-star">✦</span>
+          <p class="text-balance-thai">อยากทำ Content ได้คล่องขึ้น โดยไม่ต้องจัด Photoshoot ทุกครั้ง</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2.5rem; max-width: 650px; margin-left: auto; margin-right: auto;">
+        <p class="text-balance-thai" style="font-size: 0.9rem; opacity: 0.65; line-height: 1.5;">
+          * AI ช่วยเสริมพลังในการทำคอนเทนต์ประจำวันให้รวดเร็วและคุ้มค่า ไม่ได้มาแทนที่การถ่ายภาพจริงทั้งหมด แต่ช่วยให้แบรนด์มีทางเลือกในการขยายภาพสินค้าได้ไร้ขีดจำกัด
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 9 — VALUE / FINAL CTA
+       ========================================== -->
+  <section class="section-padding" id="order" style="background-color: var(--color-ivory); border-top: 1px solid rgba(32,32,32,0.08);">
+    <div class="container final-cta-wrapper">
+      
+      <!-- Value Statement -->
+      <div class="final-intro-copy reveal">
+        <span class="tagline-badge" style="margin-bottom: 1rem;">GET STARTED TODAY ✦</span>
+        <h2 class="text-balance-thai">เริ่มจากสินค้าของคุณ 1 ชิ้น</h2>
+        <p class="text-balance-thai">
+          ไม่ต้องเริ่มจากการเรียน AI ทั้งหมด<br>
+          ลองเริ่มจากสินค้า 1 ชิ้น สร้าง Photoshoot 1 Set<br>
+          แล้วค่อยดูว่า AI จะช่วยคุณสร้าง Content ได้ไกลแค่ไหน
+        </p>
+      </div>
+
+      <!-- Main Offer Card (฿99) -->
+      <div class="offer-card-guide reveal">
+        <div class="offer-product-name">AI Photoshoot Guide</div>
+        <div class="offer-product-sub">คู่มือสร้าง AI Fashion Photoshoot เป็นเซ็ตจากรูปสินค้าจริง</div>
+
+        <ul class="offer-inclusions-list">
+          <li class="text-balance-thai">Step-by-step Workflow ตั้งแต่ต้นจนจบ</li>
+          <li class="text-balance-thai">Detailed AI Photoshoot tutorial</li>
+          <li class="text-balance-thai">Real 11-image example พร้อมเบื้องหลังการสั่งภาพ</li>
+          <li class="text-balance-thai">Troubleshooting Tips สำหรับปรับแก้ภาพให้ตรงใจ</li>
+          <li class="text-balance-thai">Free future Ebook updates (รับเวอร์ชันใหม่ฟรีตลอดชีพ)</li>
+        </ul>
+
+        <!-- Price Display -->
+        <div class="price-display-99">
+          <span class="symbol">฿</span>
+          <span class="amount">99</span>
+          <span class="currency">THB</span>
+        </div>
+
+        <!-- Primary CTA Button -->
+        <div class="offer-action-area">
+          <a href="upsell.html" class="btn btn-black" onclick="checkout('final_offer')">
+            เริ่มทำ AI Photoshoot — ฿99
+          </a>
+          <div class="offer-microcopy text-balance-thai">
+            ชำระครั้งเดียว • รับ Ebook • Future Ebook Updates ฟรี
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FAQ SECTION
+       ========================================== -->
+  <section class="section-padding" style="background-color: var(--color-white); border-top: 1px solid rgba(32,32,32,0.08);">
+    <div class="container">
+      
+      <div class="faq-header" style="text-align: center; max-width: 700px; margin: 0 auto 3.5rem;">
+        <span class="tagline-badge" style="margin-bottom: 1rem;">QUESTIONS & ANSWERS ✦</span>
+        <h2 class="text-balance-thai">คำถามที่พบบ่อย (FAQ)</h2>
+      </div>
+
+      <div class="faq-list reveal" style="max-width: 800px; margin: 0 auto;">
+        
+        <!-- Q1 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span class="text-balance-thai">ต้องเขียน Prompt เป็นไหม?</span>
+            <span class="faq-icon-wrap">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p class="text-balance-thai">
+                ไม่จำเป็น คู่มือนี้เน้นการ Brief สิ่งที่คุณต้องการให้ชัด แล้วใช้ AI ช่วยเปลี่ยน Brief ให้เป็นคำสั่งสำหรับสร้างภาพ
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span class="text-balance-thai">ไม่เคยใช้ AI สร้างภาพมาก่อน ใช้ได้ไหม?</span>
+            <span class="faq-icon-wrap">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p class="text-balance-thai">
+                ได้ คู่มือนี้ออกแบบมาสำหรับ Beginner และอธิบาย Workflow ตั้งแต่เริ่มต้น
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span class="text-balance-thai">ใช้กับสินค้าอะไรได้บ้าง?</span>
+            <span class="faq-icon-wrap">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p class="text-balance-thai">
+                เน้นสำหรับสินค้า Fashion โดยเฉพาะเสื้อผ้า และสามารถนำหลักการไปประยุกต์ใช้กับสินค้าแฟชั่นอื่น ๆ ได้
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span class="text-balance-thai">ซื้อแล้วมีค่าใช้จ่ายรายเดือนไหม?</span>
+            <span class="faq-icon-wrap">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p class="text-balance-thai">
+                AI Photoshoot Guide ชำระครั้งเดียว ไม่มีค่าสมาชิกรายเดือนสำหรับตัว Ebook
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span class="text-balance-thai">ถ้า AI เปลี่ยนในอนาคตล่ะ?</span>
+            <span class="faq-icon-wrap">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p class="text-balance-thai">
+                หากการเปลี่ยนแปลงของ AI มีผลต่อ Workflow ในคู่มือ เราจะปรับปรุง Ebook เป็น Version ใหม่ และแจ้งลูกค้าเดิมให้ดาวน์โหลด Version ใหม่โดยไม่มีค่าใช้จ่ายเพิ่มเติม
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-copy">
+        <span class="footer-brand">PROMPT FASHION LAB</span>
+        <span>&copy; 2026 Prompt Fashion Lab. All rights reserved.</span>
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Back to Top</a>
+        <a href="#order">Order Guide</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       STICKY MOBILE CTA
+       ========================================== -->
+  <div id="stickyMobileCta" class="sticky-mobile-cta">
+    <div class="sticky-info">
+      <div class="sticky-title">AI Photoshoot Guide — <strong>฿99</strong></div>
+    </div>
+    <a href="#order" class="sticky-btn" onclick="trackEvent('sticky_mobile_click')">เริ่มเลย</a>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
