@@ -1,0 +1,702 @@
+/* ==========================================================================
+   PROMPT FASHION LAB (PFL) — THANK YOU & ORDER CONFIRMATION PAGE
+   Aesthetic: Warm, Reassuring, Editorial Fashion, Clean & Minimal
+   ========================================================================== */
+
+/* Page Background & Base Wrapper */
+.ty-page {
+  background-color: var(--color-ivory);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-black);
+  font-family: var(--font-thai);
+}
+
+.ty-header {
+  background-color: var(--color-ivory);
+  border-bottom: 1px solid rgba(32, 32, 32, 0.08);
+  padding: 1.15rem 0;
+}
+
+.ty-main {
+  flex: 1;
+  padding: 3rem 0 5rem;
+}
+
+@media (max-width: 768px) {
+  .ty-main {
+    padding: 2rem 0 3.5rem;
+  }
+}
+
+.ty-content-wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   1. HERO / ORDER CONFIRMATION
+   Understood within 3 seconds:
+   - Order Successful
+   - Arriving via Email within 15 mins
+   - Check Junk/Spam if not seen
+   ========================================== */
+.ty-hero {
+  text-align: center;
+  margin-bottom: 2.75rem;
+}
+
+/* Success status badge */
+.ty-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #EDF7EE;
+  border: 1.5px solid #A5D6A7;
+  color: #1B5E20;
+  font-family: var(--font-grotesk);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.4rem 1.1rem;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(27, 94, 32, 0.06);
+}
+
+.ty-status-badge .check-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #2E7D32;
+  color: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.ty-status-badge .check-icon svg {
+  width: 10px;
+  height: 10px;
+  stroke: #FFFFFF;
+}
+
+.ty-title {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-black);
+  margin-bottom: 0.85rem;
+  line-height: 1.25;
+}
+
+.ty-title .heart {
+  font-weight: 400;
+  display: inline-block;
+  transform: translateY(-1px);
+}
+
+.ty-subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 576px) {
+  .ty-subtitle {
+    font-size: 1.12rem;
+  }
+}
+
+.ty-eta-text {
+  font-size: 1.05rem;
+  color: rgba(32, 32, 32, 0.85);
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+.ty-eta-text strong {
+  color: var(--color-black);
+  font-weight: 600;
+}
+
+/* Clear Email Highlight Notice Box */
+.ty-email-notice {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-black);
+  box-shadow: 4px 4px 0 var(--color-yellow);
+  border-radius: 6px;
+  padding: 1.5rem 1.75rem;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin: 0 auto;
+  max-width: 650px;
+  transition: transform 0.2s ease;
+}
+
+@media (max-width: 576px) {
+  .ty-email-notice {
+    padding: 1.25rem;
+    gap: 0.85rem;
+    box-shadow: 3px 3px 0 var(--color-yellow);
+  }
+}
+
+.ty-email-icon-box {
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-yellow);
+  border: 1.5px solid var(--color-black);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 576px) {
+  .ty-email-icon-box {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+.ty-email-content {
+  flex: 1;
+}
+
+.ty-email-heading {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ty-email-badge {
+  font-family: var(--font-grotesk);
+  font-size: 0.72rem;
+  font-weight: 700;
+  background-color: rgba(241, 107, 85, 0.12);
+  color: var(--color-coral);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+
+.ty-email-text {
+  font-size: 0.95rem;
+  color: rgba(32, 32, 32, 0.8);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.ty-email-text strong {
+  color: var(--color-black);
+  font-weight: 600;
+}
+
+/* ==========================================
+   2. WHAT YOU'LL RECEIVE (สิ่งที่กำลังจะได้รับ)
+   ========================================== */
+.ty-section {
+  margin-bottom: 2.75rem;
+}
+
+.ty-section-header {
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.ty-section-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--color-black);
+  margin: 0;
+}
+
+.ty-section-tag {
+  font-family: var(--font-grotesk);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(32, 32, 32, 0.45);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Product Card */
+.ty-product-card {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-black);
+  box-shadow: 5px 5px 0 var(--color-black);
+  border-radius: 6px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 0;
+}
+
+@media (max-width: 700px) {
+  .ty-product-card {
+    grid-template-columns: 1fr;
+    box-shadow: 4px 4px 0 var(--color-black);
+  }
+}
+
+.ty-product-visual {
+  background-color: #F1ECE1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-right: 2px solid var(--color-black);
+}
+
+@media (max-width: 700px) {
+  .ty-product-visual {
+    border-right: none;
+    border-bottom: 2px solid var(--color-black);
+    padding: 1.75rem 1.5rem 1.25rem;
+  }
+}
+
+.ty-product-img-wrap {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(32, 32, 32, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.ty-product-img-wrap:hover {
+  transform: translateY(-2px);
+}
+
+.ty-product-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.ty-product-format-badge {
+  margin-top: 0.85rem;
+  font-family: var(--font-grotesk);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: rgba(32, 32, 32, 0.65);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(32, 32, 32, 0.15);
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+}
+
+.ty-product-details {
+  padding: 2rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 576px) {
+  .ty-product-details {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+.ty-product-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ty-product-name {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-black);
+  margin: 0;
+  font-family: var(--font-grotesk);
+  letter-spacing: -0.01em;
+}
+
+.ty-product-price-badge {
+  font-family: var(--font-grotesk);
+  font-size: 0.88rem;
+  font-weight: 700;
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+  border: 1.5px solid var(--color-black);
+  padding: 0.2rem 0.65rem;
+  border-radius: 4px;
+}
+
+.ty-product-flow-line {
+  font-family: var(--font-grotesk);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-coral);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
+.ty-product-subline {
+  font-size: 0.95rem;
+  color: rgba(32, 32, 32, 0.8);
+  line-height: 1.55;
+  margin-bottom: 1.35rem;
+}
+
+/* Feature Check List */
+.ty-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.ty-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  color: var(--color-black);
+  line-height: 1.45;
+}
+
+.ty-feature-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background-color: #EDF7EE;
+  color: #2E7D32;
+  border: 1px solid #A5D6A7;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ==========================================
+   3. WHAT TO DO NEXT (ระหว่างรอ Ebook...)
+   ========================================== */
+.ty-next-card {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-black);
+  box-shadow: 4px 4px 0 var(--color-black);
+  border-radius: 6px;
+  padding: 1.75rem 2rem;
+}
+
+@media (max-width: 576px) {
+  .ty-next-card {
+    padding: 1.35rem 1.25rem;
+  }
+}
+
+.ty-next-lead {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(32, 32, 32, 0.85);
+  margin-bottom: 0.85rem;
+}
+
+.ty-next-lead strong {
+  color: var(--color-black);
+  font-weight: 600;
+}
+
+.ty-next-step-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: rgba(32, 32, 32, 0.85);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+
+.ty-step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-black);
+  color: var(--color-ivory);
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-family: var(--font-grotesk);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Reassuring Highlight Box */
+.ty-reassure-box {
+  background-color: #FFFDF7;
+  border: 1.5px dashed rgba(32, 32, 32, 0.3);
+  border-radius: 6px;
+  padding: 1.15rem 1.35rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.ty-reassure-icon {
+  color: var(--color-coral);
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.ty-reassure-quote {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-black);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.ty-reassure-sub {
+  font-size: 0.88rem;
+  color: rgba(32, 32, 32, 0.65);
+  margin-top: 0.25rem;
+}
+
+/* ==========================================
+   4. EMAIL UPDATE REMINDER (FREE EBOOK UPDATE)
+   ========================================== */
+.ty-update-card {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-black);
+  box-shadow: 4px 4px 0 var(--color-coral);
+  border-radius: 6px;
+  padding: 1.75rem 2rem;
+  position: relative;
+}
+
+@media (max-width: 576px) {
+  .ty-update-card {
+    padding: 1.35rem 1.25rem;
+  }
+}
+
+.ty-update-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--color-coral);
+  color: var(--color-white);
+  font-family: var(--font-grotesk);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 0.85rem;
+}
+
+.ty-update-text {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: rgba(32, 32, 32, 0.85);
+  margin-bottom: 0.6rem;
+}
+
+.ty-update-callout {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: var(--color-ivory);
+  border-left: 3px solid var(--color-coral);
+  padding: 0.65rem 0.95rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 0.65rem;
+  border-radius: 0 4px 4px 0;
+}
+
+.ty-update-footnote {
+  font-size: 0.82rem;
+  color: rgba(32, 32, 32, 0.55);
+  margin: 0;
+}
+
+/* ==========================================
+   5. SUPPORT MESSAGE
+   ========================================== */
+.ty-support-card {
+  background-color: var(--color-ivory);
+  border: 1.5px dashed rgba(32, 32, 32, 0.25);
+  border-radius: 6px;
+  padding: 1.35rem 1.75rem;
+  text-align: left;
+}
+
+@media (max-width: 576px) {
+  .ty-support-card {
+    padding: 1.15rem 1.25rem;
+  }
+}
+
+.ty-support-heading {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.ty-support-heading span.icon {
+  color: var(--color-coral);
+}
+
+.ty-support-text {
+  font-size: 0.92rem;
+  color: rgba(32, 32, 32, 0.75);
+  line-height: 1.55;
+  margin-bottom: 0.75rem;
+}
+
+.ty-support-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-grotesk);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-black);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--color-black);
+  padding-bottom: 2px;
+  transition: var(--transition-fast);
+}
+
+.ty-support-action:hover {
+  color: var(--color-coral);
+  border-bottom-color: var(--color-coral);
+}
+
+/* ==========================================
+   6. FINAL EDITORIAL MESSAGE & SIGNOFF
+   ========================================== */
+.ty-final-block {
+  text-align: center;
+  padding: 3.5rem 1rem 1.5rem;
+}
+
+.ty-final-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  color: var(--color-coral);
+  font-size: 0.85rem;
+}
+
+.ty-final-divider::before,
+.ty-final-divider::after {
+  content: '';
+  width: 50px;
+  height: 1px;
+  background-color: rgba(32, 32, 32, 0.15);
+}
+
+.ty-final-headline {
+  font-size: clamp(1.6rem, 4.5vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--color-black);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.ty-final-mantra {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-coral);
+  letter-spacing: 0.01em;
+  margin-bottom: 0.75rem;
+}
+
+.ty-final-brand {
+  font-family: var(--font-grotesk);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(32, 32, 32, 0.5);
+  margin-bottom: 2rem;
+}
+
+.ty-back-home-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.85rem;
+  font-family: var(--font-grotesk);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--color-black);
+  border: 1.5px solid var(--color-black);
+  border-radius: 4px;
+  transition: var(--transition-smooth);
+}
+
+.ty-back-home-btn:hover {
+  background-color: var(--color-black);
+  color: var(--color-ivory);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Subtle animation triggers */
+.ty-fade-in {
+  animation: tyFadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes tyFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
