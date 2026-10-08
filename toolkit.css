@@ -86,9 +86,25 @@
 .hero-main-title {
   font-size: clamp(2rem, 4.5vw, 3.2rem);
   font-weight: 800;
-  line-height: 1.18;
+  line-height: 1.25;
   letter-spacing: -0.02em;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  color: var(--color-black);
+}
+
+.hero-title-lead {
+  display: block;
+  font-size: 0.68em;
+  font-weight: 500;
+  color: rgba(32, 32, 32, 0.62);
+  margin-bottom: 0.35rem;
+  letter-spacing: normal;
+}
+
+.hero-title-main {
+  display: block;
+  font-size: 1em;
+  font-weight: 800;
   color: var(--color-black);
 }
 
