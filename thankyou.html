@@ -8,13 +8,6 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-DDGN5M6J9N');
-    // Conversion Tracking Event
-    gtag('event', 'purchase_confirmed', {
-      'event_category': 'ecommerce',
-      'item_name': 'AI Photoshoot Guide',
-      'value': 99,
-      'currency': 'THB'
-    });
   </script>
 
   <!-- Meta Pixel Code -->
@@ -29,6 +22,94 @@
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '1459724172740305');
   fbq('track', 'PageView');
+
+  // --- Verified Successful Purchase Tracking: AI Photoshoot Guide (THB 99) ---
+  (function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const sessionId = urlParams.get('session_id') || urlParams.get('checkout_session_id');
+    const referrer = document.referrer || '';
+    const isStripeReferrer = referrer.includes('stripe.com');
+    const testCode = urlParams.get('test_event_code');
+
+    // Key for localStorage order deduplication (persists across page reloads/revisits)
+    const DEDUP_KEY = 'pfl_tracked_purchases';
+    function getTrackedOrders() {
+      try {
+        return JSON.parse(localStorage.getItem(DEDUP_KEY) || '[]');
+      } catch (e) {
+        return [];
+      }
+    }
+    function markOrderTracked(id) {
+      try {
+        const tracked = getTrackedOrders();
+        if (!tracked.includes(id)) {
+          tracked.push(id);
+          localStorage.setItem(DEDUP_KEY, JSON.stringify(tracked));
+        }
+      } catch (e) {}
+    }
+
+    let orderId = null;
+    let shouldTrack = false;
+
+    // 1. Legitimate Stripe Checkout Session passed in URL (?session_id=cs_...)
+    if (sessionId && sessionId.startsWith('cs_')) {
+      orderId = sessionId;
+      if (!getTrackedOrders().includes(orderId)) {
+        shouldTrack = true;
+      } else {
+        console.warn('[Meta Pixel] Purchase already recorded for session ID:', orderId, '- Skipping duplicate event.');
+      }
+    } 
+    // 2. Fallback: Customer directly redirected from stripe.com before ?session_id= parameter was added in Stripe
+    else if (isStripeReferrer) {
+      const sessionKey = 'pfl_paid_guide_99';
+      if (!sessionStorage.getItem(sessionKey)) {
+        orderId = 'pfl_guide_' + Date.now() + '_' + Math.random().toString(36).substring(2, 8);
+        sessionStorage.setItem(sessionKey, orderId);
+        shouldTrack = true;
+      } else {
+        console.warn('[Meta Pixel] Purchase already recorded in this session. Skipping duplicate event.');
+      }
+    } 
+    // 3. Direct access / unverified visit - DO NOT FIRE false purchase
+    else {
+      console.warn('[Meta Pixel] No valid Stripe checkout session detected. Purchase event suppressed to prevent false conversions.');
+    }
+
+    if (shouldTrack && orderId) {
+      markOrderTracked(orderId);
+
+      const eventOptions = { eventID: orderId };
+      if (testCode) {
+        eventOptions.test_event_code = testCode;
+      }
+
+      fbq('track', 'Purchase', {
+        content_name: 'AI Photoshoot Guide',
+        content_category: 'Ebook',
+        content_ids: ['guide_99'],
+        content_type: 'product',
+        value: 99.00,
+        currency: 'THB',
+        num_items: 1
+      }, eventOptions);
+
+      console.log('[Meta Pixel] Purchase event tracked successfully with eventID:', orderId, 'Value: 99 THB');
+
+      // Sync verified transaction to Google Analytics (deduplicated by transaction_id)
+      if (typeof gtag === 'function') {
+        gtag('event', 'purchase_confirmed', {
+          transaction_id: orderId,
+          event_category: 'ecommerce',
+          item_name: 'AI Photoshoot Guide',
+          value: 99.00,
+          currency: 'THB'
+        });
+      }
+    }
+  })();
   </script>
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1459724172740305&ev=PageView&noscript=1"

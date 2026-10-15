@@ -86,12 +86,63 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+  // Ensure all Stripe checkout buttons trigger InitiateCheckout
+  document.querySelectorAll('a[href*="buy.stripe.com"]').forEach(button => {
+    button.addEventListener('click', function() {
+      const href = this.getAttribute('href') || '';
+      if (href.includes('4gMfZhbAt0z7f735NtcIE05')) {
+        trackMetaInitiateCheckout('guide');
+      } else if (href.includes('5kQ9ATgUN2Hf3olgs7cIE06')) {
+        trackMetaInitiateCheckout('toolkit');
+      }
+    });
+  });
 });
 
-// Analytics tracking helper
+// Debounce helper to prevent duplicate InitiateCheckout events on double clicks
+let lastCheckoutTracked = 0;
+function trackMetaInitiateCheckout(packageType) {
+  const now = Date.now();
+  if (now - lastCheckoutTracked < 800) return;
+  lastCheckoutTracked = now;
+
+  if (typeof fbq === 'function') {
+    if (packageType === 'guide') {
+      fbq('track', 'InitiateCheckout', {
+        content_name: 'AI Photoshoot Guide',
+        content_category: 'Ebook',
+        content_ids: ['guide_99'],
+        content_type: 'product',
+        value: 99.00,
+        currency: 'THB',
+        num_items: 1
+      });
+      console.log('[Meta Pixel] InitiateCheckout tracked: AI Photoshoot Guide (99 THB)');
+    } else {
+      fbq('track', 'InitiateCheckout', {
+        content_name: 'Complete AI Photoshoot Toolkit',
+        content_category: 'Ebook & Toolkit',
+        content_ids: ['toolkit_349'],
+        content_type: 'product',
+        value: 349.00,
+        currency: 'THB',
+        num_items: 1
+      });
+      console.log('[Meta Pixel] InitiateCheckout tracked: Complete AI Photoshoot Toolkit (349 THB)');
+    }
+  }
+}
+
+// Analytics tracking helper called by button onclick handlers
 function trackUpsellEvent(eventName, eventDetails = {}) {
   if (typeof gtag === 'function') {
     gtag('event', eventName, eventDetails);
   }
   console.log('[PFL Event]', eventName, eventDetails);
+
+  if (eventName.includes('guide_only')) {
+    trackMetaInitiateCheckout('guide');
+  } else if (eventName.includes('upgrade') || eventName.includes('toolkit')) {
+    trackMetaInitiateCheckout('toolkit');
+  }
 }

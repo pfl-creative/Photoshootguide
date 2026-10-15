@@ -8,13 +8,6 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-DDGN5M6J9N');
-    // Conversion Tracking Event for AI Photoshoot Toolkit (฿359)
-    gtag('event', 'purchase_confirmed', {
-      'event_category': 'ecommerce',
-      'item_name': 'AI Photoshoot Toolkit',
-      'value': 359,
-      'currency': 'THB'
-    });
   </script>
 
   <!-- Meta Pixel Code -->
@@ -29,6 +22,94 @@
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '1459724172740305');
   fbq('track', 'PageView');
+
+  // --- Verified Successful Purchase Tracking: Complete AI Photoshoot Toolkit (THB 349) ---
+  (function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const sessionId = urlParams.get('session_id') || urlParams.get('checkout_session_id');
+    const referrer = document.referrer || '';
+    const isStripeReferrer = referrer.includes('stripe.com');
+    const testCode = urlParams.get('test_event_code');
+
+    // Key for localStorage order deduplication (persists across page reloads/revisits)
+    const DEDUP_KEY = 'pfl_tracked_purchases';
+    function getTrackedOrders() {
+      try {
+        return JSON.parse(localStorage.getItem(DEDUP_KEY) || '[]');
+      } catch (e) {
+        return [];
+      }
+    }
+    function markOrderTracked(id) {
+      try {
+        const tracked = getTrackedOrders();
+        if (!tracked.includes(id)) {
+          tracked.push(id);
+          localStorage.setItem(DEDUP_KEY, JSON.stringify(tracked));
+        }
+      } catch (e) {}
+    }
+
+    let orderId = null;
+    let shouldTrack = false;
+
+    // 1. Legitimate Stripe Checkout Session passed in URL (?session_id=cs_...)
+    if (sessionId && sessionId.startsWith('cs_')) {
+      orderId = sessionId;
+      if (!getTrackedOrders().includes(orderId)) {
+        shouldTrack = true;
+      } else {
+        console.warn('[Meta Pixel] Purchase already recorded for session ID:', orderId, '- Skipping duplicate event.');
+      }
+    } 
+    // 2. Fallback: Customer directly redirected from stripe.com before ?session_id= parameter was added in Stripe
+    else if (isStripeReferrer) {
+      const sessionKey = 'pfl_paid_toolkit_349';
+      if (!sessionStorage.getItem(sessionKey)) {
+        orderId = 'pfl_toolkit_' + Date.now() + '_' + Math.random().toString(36).substring(2, 8);
+        sessionStorage.setItem(sessionKey, orderId);
+        shouldTrack = true;
+      } else {
+        console.warn('[Meta Pixel] Purchase already recorded in this session. Skipping duplicate event.');
+      }
+    } 
+    // 3. Direct access / unverified visit - DO NOT FIRE false purchase
+    else {
+      console.warn('[Meta Pixel] No valid Stripe checkout session detected. Purchase event suppressed to prevent false conversions.');
+    }
+
+    if (shouldTrack && orderId) {
+      markOrderTracked(orderId);
+
+      const eventOptions = { eventID: orderId };
+      if (testCode) {
+        eventOptions.test_event_code = testCode;
+      }
+
+      fbq('track', 'Purchase', {
+        content_name: 'Complete AI Photoshoot Toolkit',
+        content_category: 'Ebook & Toolkit',
+        content_ids: ['toolkit_349'],
+        content_type: 'product',
+        value: 349.00,
+        currency: 'THB',
+        num_items: 1
+      }, eventOptions);
+
+      console.log('[Meta Pixel] Purchase event tracked successfully with eventID:', orderId, 'Value: 349 THB');
+
+      // Sync verified transaction to Google Analytics (deduplicated by transaction_id)
+      if (typeof gtag === 'function') {
+        gtag('event', 'purchase_confirmed', {
+          transaction_id: orderId,
+          event_category: 'ecommerce',
+          item_name: 'Complete AI Photoshoot Toolkit',
+          value: 349.00,
+          currency: 'THB'
+        });
+      }
+    }
+  })();
   </script>
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1459724172740305&ev=PageView&noscript=1"
@@ -36,7 +117,7 @@
   <!-- End Meta Pixel Code -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Order Confirmed — ขอบคุณสำหรับการสั่งซื้อ AI Photoshoot Toolkit (฿359) โดย Prompt Fashion Lab">
+  <meta name="description" content="Order Confirmed — ขอบคุณสำหรับการสั่งซื้อ AI Photoshoot Toolkit (฿349) โดย Prompt Fashion Lab">
   <title>ขอบคุณสำหรับการสั่งซื้อ AI Photoshoot Toolkit | Prompt Fashion Lab</title>
 
   <!-- PFL Stylesheets -->
@@ -55,7 +136,7 @@
         PROMPT FASHION <span>LAB</span>
       </a>
       <div style="display: flex; align-items: center; gap: 0.65rem;">
-        <span class="tk-header-badge">TOOLKIT ✦ ฿359</span>
+        <span class="tk-header-badge">TOOLKIT ✦ ฿349</span>
         <div class="brand-badge">PFL ✦ STUDIO</div>
       </div>
     </div>
@@ -137,7 +218,7 @@
                 Your AI Photoshoot Toolkit
               </h2>
             </div>
-            <span class="tk-section-badge">✦ 3 EBOOKS BUNDLE (฿359)</span>
+            <span class="tk-section-badge">✦ 3 EBOOKS BUNDLE (฿349)</span>
           </div>
 
           <!-- Main Bundle Card -->
