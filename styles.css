@@ -3673,3 +3673,165 @@ footer {
   font-size: 0.85rem;
   color: rgba(32, 32, 32, 0.65);
 }
+
+/* ==========================================================================
+   SUBTLE EDITORIAL RECOMMENDATION: PFL GENERATOR V2
+   Secondary option placed below FAQ and before Footer
+   ========================================================================== */
+.section-generator-rec {
+  background-color: var(--color-ivory);
+  border-top: 1px solid rgba(32, 32, 32, 0.08);
+  padding: 4rem 0 4.5rem;
+}
+
+@media (max-width: 768px) {
+  .section-generator-rec {
+    padding: 3rem 0 3.5rem;
+  }
+}
+
+.generator-rec-card {
+  max-width: 620px;
+  margin: 0 auto;
+  background-color: var(--color-white);
+  border: 1px solid rgba(32, 32, 32, 0.14);
+  border-radius: 4px;
+  padding: 2.5rem 2.25rem 2rem;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(32, 32, 32, 0.04);
+}
+
+@media (max-width: 576px) {
+  .generator-rec-card {
+    padding: 2rem 1.25rem 1.75rem;
+  }
+}
+
+.generator-rec-eyebrow {
+  display: inline-block;
+  font-family: var(--font-grotesk);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-coral);
+  background-color: rgba(241, 107, 85, 0.08);
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  margin-bottom: 1.15rem;
+}
+
+.generator-rec-title {
+  font-family: var(--font-grotesk);
+  font-size: clamp(1.2rem, 2.5vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--color-black);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.generator-rec-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 1.25rem;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.35rem;
+}
+
+.generator-rec-bullets li {
+  font-family: var(--font-grotesk);
+  font-size: clamp(1.05rem, 2.3vw, 1.3rem);
+  font-weight: 700;
+  color: var(--color-black);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+}
+
+.generator-rec-bullets .bullet-dash {
+  color: var(--color-coral);
+  font-weight: 800;
+  font-size: 1.1em;
+}
+
+.generator-rec-desc {
+  font-family: var(--font-thai);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: rgba(32, 32, 32, 0.75);
+  max-width: 500px;
+  margin: 0 auto 1.25rem;
+}
+
+.generator-rec-workflow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.55rem 1.4rem;
+  background-color: var(--color-ivory);
+  border: 1.5px dashed rgba(32, 32, 32, 0.22);
+  border-radius: 50px;
+  font-family: var(--font-grotesk);
+  font-size: clamp(1.15rem, 2.4vw, 1.35rem);
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 1.75rem;
+  letter-spacing: -0.01em;
+}
+
+.generator-rec-workflow .workflow-arrow {
+  color: var(--color-coral);
+  font-weight: 800;
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+.generator-rec-workflow .workflow-heart {
+  color: var(--color-coral);
+  font-style: normal;
+  font-size: 1.15em;
+  line-height: 1;
+}
+
+.generator-rec-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.generator-rec-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  font-family: var(--font-grotesk);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-black);
+  background-color: transparent;
+  border: 1.5px solid var(--color-black);
+  text-decoration: none;
+  transition: var(--transition-fast);
+  cursor: pointer;
+}
+
+.generator-rec-btn:hover {
+  background-color: var(--color-black);
+  color: var(--color-ivory);
+  transform: translateY(-2px);
+}
+
+.generator-rec-reassurance {
+  font-family: var(--font-thai);
+  font-size: 0.82rem;
+  color: rgba(32, 32, 32, 0.55);
+}

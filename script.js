@@ -258,6 +258,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof window.gtag === 'function') {
       window.gtag('event', eventName, params);
     }
+    if (typeof window.fbq === 'function') {
+      window.fbq('trackCustom', eventName, params);
+    }
     console.log(`[Event Tracked] ${eventName}`, params);
   };
 
